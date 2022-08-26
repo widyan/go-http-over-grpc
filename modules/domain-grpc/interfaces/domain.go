@@ -10,10 +10,6 @@ type Usecase_Interface interface {
 	Test(ctx context.Context, name string) string
 }
 
-type TestService interface {
-	Test(ctx context.Context, name string) string
-}
-
 type Repository_Interface interface {
 	InsertUser(ctx context.Context, user entity.Users) (err error)
 	GetOneUser(ctx context.Context) (user entity.Users, err error)

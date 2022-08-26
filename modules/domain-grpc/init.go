@@ -6,9 +6,9 @@ import (
 	"google.golang.org/grpc"
 
 	"github.com/widyan/go-codebase/modules/domain-grpc/handler"
-	pb "github.com/widyan/go-codebase/modules/domain-grpc/proto/v1"
 	"github.com/widyan/go-codebase/modules/domain-grpc/repository"
 	"github.com/widyan/go-codebase/modules/domain-grpc/usecase"
+	pb "github.com/widyan/go-codebase/proto/v1"
 	validate "github.com/widyan/go-codebase/validator"
 
 	"github.com/sirupsen/logrus"
