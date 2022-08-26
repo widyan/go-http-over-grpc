@@ -3,7 +3,7 @@
 ### How to Install Protocol Buffers on Windows?
 - Step 1:  At first, browser https://github.com/protocolbuffers/protobuf/releases
 - download protoc-xxxxx-win32.zip or protoc-xxxxx-win64.zip
-- extract and save in C:/
+- extract and save in C:\
 - set file C:\protoc-21.5-win64\bin in environment variabel ‘System variables’ in variabel path
 
 ### Generate File Proto
