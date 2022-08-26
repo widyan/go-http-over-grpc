@@ -184,11 +184,6 @@ func NewHTTPServer(logger *logrus.Logger) error {
 		}
 	}
 
-	// logrus configuration
-	logrus.SetFormatter(&logrus.JSONFormatter{})
-	logrus.SetOutput(os.Stdout)
-	logrus.SetReportCaller(true)
-
 	// create http server mux
 	mux := http.NewServeMux()
 	mux.Handle("/", rmux)
