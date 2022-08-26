@@ -2,9 +2,12 @@ package handler
 
 import (
 	"context"
+	"encoding/json"
+	"fmt"
+	"strconv"
 
 	"github.com/widyan/go-codebase/modules/domain-grpc/interfaces"
-	pb "github.com/widyan/go-codebase/modules/domain-grpc/proto/v1"
+	pb "github.com/widyan/go-codebase/proto/v1"
 	"github.com/widyan/go-codebase/responses"
 	"github.com/widyan/go-codebase/validator"
 
@@ -28,7 +31,19 @@ func CreateHandler(Usecase interfaces.Usecase_Interface, logger *logrus.Logger, 
 }
 
 func (a *APIHandler) TestService(ctx context.Context, request *pb.TestRequest) (*pb.TestResponse, error) {
+	dcdin, _ := json.Marshal(request)
+	fmt.Println(string(dcdin))
+
 	return &pb.TestResponse{
-		Status: "Ok",
+		Status: request.Name,
+	}, nil
+}
+
+func (a *APIHandler) TestServiceWithParam(ctx context.Context, request *pb.TestRequest) (*pb.TestResponse, error) {
+	dcdin, _ := json.Marshal(request)
+	fmt.Println(string(dcdin))
+
+	return &pb.TestResponse{
+		Status: strconv.FormatInt(int64(request.UserID), 10),
 	}, nil
 }

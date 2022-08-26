@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
-	"path"
 	"runtime"
+	"strconv"
 	"strings"
 	"syscall"
 
@@ -19,8 +19,8 @@ import (
 	"github.com/widyan/go-codebase/config"
 	"github.com/widyan/go-codebase/helper"
 	domaingrpc "github.com/widyan/go-codebase/modules/domain-grpc"
-	pb "github.com/widyan/go-codebase/modules/domain-grpc/proto/v1"
 	"github.com/widyan/go-codebase/notification"
+	pb "github.com/widyan/go-codebase/proto/v1"
 	"github.com/widyan/go-codebase/responses"
 	"go.elastic.co/apm/module/apmgrpc"
 	"go.elastic.co/apm/module/apmhttp"
@@ -50,10 +50,10 @@ func main() {
 		CallerPrettyfier: func(f *runtime.Frame) (string, string) {
 			s := strings.Split(f.Function, ".")
 			funcname := s[len(s)-1]
-			_, filename := path.Split(f.File)
-			return funcname, filename
+			return funcname, f.File + ":" + strconv.Itoa(f.Line)
 		},
 	})
+
 	logger.SetReportCaller(true)
 	// logger.Hooks.Add(&apmlogrus.Hook{
 	// 	LogLevels: logrus.AllLevels,
@@ -205,9 +205,7 @@ func NewHTTPServer(logger *logrus.Logger) error {
 	// running delivery http server
 	logger.Println("[SERVER] REST HTTP server is ready")
 
-	http.ListenAndServe(":7000", mux)
-
-	if err != nil {
+	if err = http.ListenAndServe(":7000", mux); err != nil {
 		logger.Println(err.Error())
 		return err
 	}
