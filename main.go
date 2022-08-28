@@ -91,5 +91,5 @@ func main() {
 	}()
 
 	err = gateway.Run(logger, "dns:///"+addr)
-	logger.Panic(err)
+	logger.Panic(err) //
 }
