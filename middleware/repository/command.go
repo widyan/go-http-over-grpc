@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/widyan/go-codebase/middleware/entity"
-	"github.com/widyan/go-codebase/middleware/interfaces"
+	"github.com/widyan/go-http-over-grpc/middleware/entity"
+	"github.com/widyan/go-http-over-grpc/middleware/interfaces"
 
 	"github.com/sirupsen/logrus"
 )

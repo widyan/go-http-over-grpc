@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/widyan/go-codebase/helper/null"
-	"github.com/widyan/go-codebase/modules/domain-grpc/entity"
+	"github.com/widyan/go-http-over-grpc/helper/null"
+	"github.com/widyan/go-http-over-grpc/modules/domain-grpc/entity"
 )
 
 const (

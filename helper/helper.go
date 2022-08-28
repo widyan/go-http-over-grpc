@@ -8,7 +8,7 @@ import (
 	"net/smtp"
 	"time"
 
-	"github.com/widyan/go-codebase/model"
+	"github.com/widyan/go-http-over-grpc/model"
 
 	"go.elastic.co/apm/module/apmhttp"
 )

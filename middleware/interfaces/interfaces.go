@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/gin-gonic/gin"
-	"github.com/widyan/go-codebase/middleware/entity"
-	"github.com/widyan/go-codebase/middleware/model"
+	"github.com/widyan/go-http-over-grpc/middleware/entity"
+	"github.com/widyan/go-http-over-grpc/middleware/model"
 )
 
 type UsecaseInterface interface {

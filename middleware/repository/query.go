@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 
-	"github.com/widyan/go-codebase/middleware/entity"
+	"github.com/widyan/go-http-over-grpc/middleware/entity"
 )
 
 func (r *Repository) GetUserBasedOnEmail(ctx context.Context, email string) (users []entity.User, err error) {

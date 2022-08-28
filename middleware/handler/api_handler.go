@@ -5,10 +5,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
-	"github.com/widyan/go-codebase/middleware/interfaces"
-	"github.com/widyan/go-codebase/middleware/model"
-	"github.com/widyan/go-codebase/responses"
-	"github.com/widyan/go-codebase/validator"
+	"github.com/widyan/go-http-over-grpc/middleware/interfaces"
+	"github.com/widyan/go-http-over-grpc/middleware/model"
+	"github.com/widyan/go-http-over-grpc/responses"
+	"github.com/widyan/go-http-over-grpc/validator"
 )
 
 type APIHandler struct {

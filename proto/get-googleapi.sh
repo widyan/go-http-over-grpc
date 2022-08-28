@@ -22,4 +22,13 @@ for file in any.proto wrappers.proto; do
     curl -Ls "${source}/$file" >${protobufdir}/$file
 done
 
+protobufdir="protoc-gen-openapiv2/options"
+source="https://raw.githubusercontent.com/grpc-ecosystem/grpc-gateway/master/protoc-gen-openapiv2/options"
+
+mkdir -p $protobufdir
+
+for file in annotations.proto openapiv2.proto; do
+    curl -Ls "${source}/$file" >${protobufdir}/$file
+done
+
 echo "Successfully getting googleapi lib"

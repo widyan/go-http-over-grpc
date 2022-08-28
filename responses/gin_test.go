@@ -7,8 +7,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/widyan/go-codebase/helper"
-	"github.com/widyan/go-codebase/model"
+	"github.com/widyan/go-http-over-grpc/helper"
+	"github.com/widyan/go-http-over-grpc/model"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"

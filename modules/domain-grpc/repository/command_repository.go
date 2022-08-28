@@ -4,8 +4,8 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/widyan/go-codebase/modules/domain-grpc/entity"
-	"github.com/widyan/go-codebase/modules/domain-grpc/interfaces"
+	"github.com/widyan/go-http-over-grpc/modules/domain-grpc/entity"
+	"github.com/widyan/go-http-over-grpc/modules/domain-grpc/interfaces"
 
 	"github.com/sirupsen/logrus"
 )

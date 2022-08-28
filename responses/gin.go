@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"strconv"
 
-	"github.com/widyan/go-codebase/model"
+	"github.com/widyan/go-http-over-grpc/model"
 
 	"github.com/gin-gonic/gin"
 )

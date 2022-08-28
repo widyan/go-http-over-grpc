@@ -10,13 +10,13 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
-	"github.com/widyan/go-codebase/helper"
-	"github.com/widyan/go-codebase/middleware/entity"
-	"github.com/widyan/go-codebase/middleware/interfaces"
-	"github.com/widyan/go-codebase/middleware/model"
-	gmodel "github.com/widyan/go-codebase/model"
-	"github.com/widyan/go-codebase/responses"
-	rspn "github.com/widyan/go-codebase/responses"
+	"github.com/widyan/go-http-over-grpc/helper"
+	"github.com/widyan/go-http-over-grpc/middleware/entity"
+	"github.com/widyan/go-http-over-grpc/middleware/interfaces"
+	"github.com/widyan/go-http-over-grpc/middleware/model"
+	gmodel "github.com/widyan/go-http-over-grpc/model"
+	"github.com/widyan/go-http-over-grpc/responses"
+	rspn "github.com/widyan/go-http-over-grpc/responses"
 )
 
 type Usecase struct {

@@ -3,7 +3,7 @@ package usecase
 import (
 	"context"
 
-	"github.com/widyan/go-codebase/modules/domain-grpc/interfaces"
+	"github.com/widyan/go-http-over-grpc/modules/domain-grpc/interfaces"
 
 	"github.com/sirupsen/logrus"
 )
