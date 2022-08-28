@@ -26,7 +26,7 @@
 ### Running apps
 - Add .env (reference from .env.example)
 - Exec command `go run .`
-- If success, run `http://localhost:7000` swagger URI from browser
+- If success, run http://localhost:7000 swagger URI from browser
 
 
 ### References
