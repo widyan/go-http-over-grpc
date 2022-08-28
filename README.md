@@ -17,7 +17,7 @@
 ### Generate File Proto (Old Way)
 - To folder /proto
 - Exec ./get-googleapi.sh (Only 1 exec for create library)
-- Create file xxxxx.proto in v1
+- Create file xxxxx.proto
 - Exec cmd `protoc --proto_path=. v1/*.proto --go_out=plugins=grpc:./ --grpc-gateway_out=:./`
 
 ### Generate File Proto and generate OpenAPI in folder third party (New Way)
@@ -26,7 +26,7 @@
 ### Running apps
 - Add .env (reference from .env.example)
 - Exec command `go run .`
-- If success, run `http://localhost:7000` swagger URI from browser
+- If success, run http://localhost:7000 swagger URI from browser
 
 
 ### References
