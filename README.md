@@ -2,31 +2,31 @@
 
 ### How to Install Protocol Buffers on Windows?
 - At first, browser https://github.com/protocolbuffers/protobuf/releases
-- download protoc-xxxxx-win32.zip or protoc-xxxxx-win64.zip
-- extract and save in C:\
-- set file C:\protoc-xxxxx-win64\bin in environment variabel ‘System variables’ in variabel path
+- Download protoc-xxxxx-win32.zip or protoc-xxxxx-win64.zip
+- Extract and save in C:\
+- Set file C:\protoc-xxxxx-win64\bin in environment variabel ‘System variables’ in variabel path
 
 ### How to Install Buf on Windows?
 - Browse https://docs.buf.build/installation
 - Download Buf for Windows and rename file become buf.exe
-- route file buf.exe to environment variabel ‘System variables’ in variabel path
+- Route file buf.exe to environment variabel ‘System variables’ in variabel path
 - Create file buf.gen.yml
-- execute command `buf mod update`
+- Execute command `buf mod update`
 - Always run buf mod update after adding a dependency to your buf.yaml
 
 ### Generate File Proto (Old Way)
-- to folder /proto
-- exec ./get-googleapi.sh (Only 1 exec for create library)
-- create file xxxxx.proto in v1
-- exec cmd `protoc --proto_path=. v1/*.proto --go_out=plugins=grpc:./ --grpc-gateway_out=:./`
+- To folder /proto
+- Exec ./get-googleapi.sh (Only 1 exec for create library)
+- Create file xxxxx.proto in v1
+- Exec cmd `protoc --proto_path=. v1/*.proto --go_out=plugins=grpc:./ --grpc-gateway_out=:./`
 
 ### Generate File Proto and generate OpenAPI in folder third party (New Way)
-- exec command `buf generate`
+- Exec command `buf generate`
 
 ### Running apps
-- add .env (reference from .env.example)
-- go run .
-- if success run `http://localhost:7000` swagger URI from browser
+- Add .env (reference from .env.example)
+- Exec command `go run .`
+- If success, run `http://localhost:7000` swagger URI from browser
 
 
 ### References
