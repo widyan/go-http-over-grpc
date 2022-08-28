@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/widyan/go-codebase/helper"
+	"github.com/widyan/go-http-over-grpc/helper"
 )
 
 type Notification struct {

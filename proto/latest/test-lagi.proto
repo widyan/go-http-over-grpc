@@ -1,0 +1,42 @@
+syntax="proto3";
+
+package proto;
+
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+//option go_package = "./v1;pb";
+option go_package = "github.com/widyan/go-http-over-grpc/proto/latest;proto";
+
+// These annotations are used when generating the OpenAPI file.
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+  info: {
+    version: "1.0";
+  };
+  external_docs: {
+    url: "https://github.com/widyan/go-http-over-grpc";
+    description: "GO gRPC-gateway repository";
+  }
+  schemes: HTTPS;
+};
+
+message  TestRequestLagi{
+  string  name = 1;
+  int64 userID = 2;
+}
+message  TestResponseLagi{
+    string  status =1;
+}
+
+service TestServiceLagi{
+  rpc TestServiceWithParam(TestRequestLagi)returns(TestResponseLagi){
+    option (google.api.http) = {
+      get: "/api/v1/testlagi/{userID}"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Test API"
+      description: "Test API"
+      tags: "Test"
+    };
+  };
+}

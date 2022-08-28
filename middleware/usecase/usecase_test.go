@@ -12,11 +12,11 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
-	"github.com/widyan/go-codebase/middleware/entity"
-	"github.com/widyan/go-codebase/middleware/interfaces"
-	"github.com/widyan/go-codebase/middleware/model"
-	iface "github.com/widyan/go-codebase/mocks/middleware/interfaces"
-	"github.com/widyan/go-codebase/responses"
+	"github.com/widyan/go-http-over-grpc/middleware/entity"
+	"github.com/widyan/go-http-over-grpc/middleware/interfaces"
+	"github.com/widyan/go-http-over-grpc/middleware/model"
+	iface "github.com/widyan/go-http-over-grpc/mocks/middleware/interfaces"
+	"github.com/widyan/go-http-over-grpc/responses"
 )
 
 func CreateTest() (repository *iface.RepositoryInterface, tools *iface.ToolsInterface, usecase interfaces.UsecaseInterface) {

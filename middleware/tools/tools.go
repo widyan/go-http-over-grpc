@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/widyan/go-codebase/middleware/interfaces"
+	"github.com/widyan/go-http-over-grpc/middleware/interfaces"
 )
 
 type ToolsImpl struct {

@@ -11,7 +11,7 @@ import (
 	"strings"
 
 	"github.com/sirupsen/logrus"
-	"github.com/widyan/go-codebase/model"
+	"github.com/widyan/go-http-over-grpc/model"
 	"go.elastic.co/apm/module/apmhttp"
 	httptrace "gopkg.in/DataDog/dd-trace-go.v1/contrib/net/http"
 )

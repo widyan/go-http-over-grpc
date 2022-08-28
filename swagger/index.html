@@ -1,0 +1,66 @@
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./assets/swagger-ui.css" />
+    <link rel="icon" type="image/png" href="./assets/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./assets/favicon-16x16.png" sizes="16x16" />
+    <style>
+      html {
+        box-sizing: border-box;
+        overflow: -moz-scrollbars-vertical;
+        overflow-y: scroll;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      body {
+        margin: 0;
+        background: #fafafa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="swagger-ui"></div>
+
+    <script src="./assets/swagger-ui-bundle.js"></script>
+    <script src="./assets/swagger-ui-standalone-preset.js"></script>
+    <script>
+      window.onload = function () {
+        // Begin Swagger UI call region
+        const ui = SwaggerUIBundle({
+          urls: [
+            { url: "./v1/base.swagger.json", name: "Base Endpoints" },
+            { url: "./v1/flow.swagger.json", name: "Flow Endpoints" },
+            { url: "./v1/laporan.swagger.json", name: "Laporan Endpoints" },
+            { url: "./v1/loan.swagger.json", name: "Loan Endpoints" },
+            { url: "./v1/masterData.swagger.json", name: "Master Data Endpoints" },
+            { url: "./v1/notifier.swagger.json", name: "Notifier Endpoints" },
+            { url: "./v1/otpPreApproval.swagger.json", name: "OTP Pre Approval Endpoints" },
+            { url: "./v1/prescreening.swagger.json", name: "Prescreening Endpoints" },
+            { url: "./v1/registration.swagger.json", name: "Registration Endpoints" },
+            { url: "./v1/rekonsiliasi.swagger.json", name: "Rekonsiliasi Endpoints" },
+            { url: "./v1/security.swagger.json", name: "Security Endpoints" },
+            { url: "./v1/userJourney.swagger.json", name: "User Journey Endpoints" },
+            { url: "./v1/laporankinerja.swagger.json", name: "Laporan Kinerja Endpoints" },
+          ],
+          dom_id: "#swagger-ui",
+          deepLinking: true,
+          presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
+          plugins: [SwaggerUIBundle.plugins.DownloadUrl],
+          layout: "StandaloneLayout",
+        });
+        // End Swagger UI call region
+
+        window.ui = ui;
+      };
+    </script>
+  </body>
+</html>

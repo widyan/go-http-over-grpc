@@ -3,7 +3,7 @@ package interfaces
 import (
 	"context"
 
-	"github.com/widyan/go-codebase/modules/domain-grpc/entity"
+	"github.com/widyan/go-http-over-grpc/modules/domain-grpc/entity"
 )
 
 type Usecase_Interface interface {

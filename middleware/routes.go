@@ -3,7 +3,7 @@ package middleware
 import (
 	"os"
 
-	"github.com/widyan/go-codebase/middleware/handler"
+	"github.com/widyan/go-http-over-grpc/middleware/handler"
 
 	"github.com/gin-gonic/gin"
 )

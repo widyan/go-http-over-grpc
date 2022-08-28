@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	entity "github.com/widyan/go-codebase/modules/domain/entity"
+	entity "github.com/widyan/go-http-over-grpc/modules/domain/entity"
 
 	mock "github.com/stretchr/testify/mock"
 )

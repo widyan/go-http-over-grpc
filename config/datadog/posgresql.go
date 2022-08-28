@@ -6,7 +6,7 @@ import (
 
 	"github.com/lib/pq"
 	"github.com/sirupsen/logrus"
-	"github.com/widyan/go-codebase/config"
+	"github.com/widyan/go-http-over-grpc/config"
 	sqltrace "gopkg.in/DataDog/dd-trace-go.v1/contrib/database/sql"
 )
 

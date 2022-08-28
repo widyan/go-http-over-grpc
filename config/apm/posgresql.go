@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/widyan/go-codebase/config"
+	"github.com/widyan/go-http-over-grpc/config"
 	"go.elastic.co/apm/module/apmsql"
 )
 
