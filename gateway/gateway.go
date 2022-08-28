@@ -82,8 +82,6 @@ func Run(logger *logrus.Logger, dialAddr string) error {
 		}),
 	}
 	// Empty parameters mean use the TLS Config specified with the server.
-	os.Setenv("SERVE_HTTP", "true")
-	fmt.Println(os.Getenv("SERVE_HTTP"))
 	if strings.ToLower(os.Getenv("SERVE_HTTP")) == "true" {
 		log.Info("Serving gRPC-Gateway and OpenAPI Documentation on http://", gatewayAddr)
 		return fmt.Errorf("serving gRPC-Gateway server: %w", gwServer.ListenAndServe())
