@@ -10,7 +10,6 @@
     }
   ],
   "schemes": [
-    "http",
     "https"
   ],
   "consumes": [
@@ -76,10 +75,10 @@
         "parameters": [
           {
             "name": "userID",
+            "description": "string userID = 2 [(validate.rules).string.email = true];",
             "in": "path",
             "required": true,
-            "type": "string",
-            "format": "int64"
+            "type": "string"
           }
         ],
         "tags": [
@@ -94,7 +93,7 @@
       "properties": {
         "userID": {
           "type": "string",
-          "format": "int64"
+          "title": "string userID = 2 [(validate.rules).string.email = true];"
         }
       }
     },

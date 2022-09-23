@@ -4,6 +4,7 @@ package proto;
 
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
+import "validate/validate.proto";
 
 //option go_package = "./v1;pb";
 option go_package = "github.com/widyan/go-http-over-grpc/proto/latest;proto";
@@ -21,10 +22,13 @@ option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
 };
 
 message  TestRequest{
-  int64 userID = 2;
+  // string userID = 2 [(validate.rules).string.email = true];
+  string userID = 1 [(validate.rules).string = {
+    min_len: 1,
+ }];
 }
 message  TestResponse{
-    string  status =1;
+  string  status = 1;
 }
 
 service Test{
