@@ -81,7 +81,7 @@ func request_Test_TestServiceWithParam_0(ctx context.Context, marshaler runtime.
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "userID")
 	}
 
-	protoReq.UserID, err = runtime.Int64(val)
+	protoReq.UserID, err = runtime.String(val)
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "userID", err)
 	}
@@ -107,7 +107,7 @@ func local_request_Test_TestServiceWithParam_0(ctx context.Context, marshaler ru
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "userID")
 	}
 
-	protoReq.UserID, err = runtime.Int64(val)
+	protoReq.UserID, err = runtime.String(val)
 	if err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "userID", err)
 	}

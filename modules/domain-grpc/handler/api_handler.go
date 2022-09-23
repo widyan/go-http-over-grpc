@@ -2,7 +2,7 @@ package handler
 
 import (
 	"context"
-	"strconv"
+	"fmt"
 
 	"github.com/widyan/go-http-over-grpc/modules/domain-grpc/interfaces"
 	pb "github.com/widyan/go-http-over-grpc/proto/latest"
@@ -34,8 +34,10 @@ func (a *APIHandler) TestService(ctx context.Context, request *pb.TestRequest) (
 		fmt.Println(string(dcdin))
 	*/
 
+	fmt.Println(request.Validate())
+
 	return &pb.TestResponse{
-		Status: "OK",
+		Status: request.UserID,
 	}, nil
 }
 
@@ -46,6 +48,6 @@ func (a *APIHandler) TestServiceWithParam(ctx context.Context, request *pb.TestR
 	*/
 
 	return &pb.TestResponse{
-		Status: strconv.FormatInt(int64(request.UserID), 10),
+		Status: request.UserID,
 	}, nil
 }

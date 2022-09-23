@@ -21,7 +21,6 @@ type APIHandler struct {
 }
 
 func CreateHandler(usecase interfaces.Usecase_Interface, logger *logrus.Logger, res responses.GinResponses, vldtr validator.ValidatorInterface) *APIHandler {
-	logger.Println("oks")
 	return &APIHandler{usecase, logger, res, vldtr}
 }
 
